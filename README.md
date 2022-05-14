@@ -7,7 +7,7 @@
 <br>
 **愛犬「クロ」の性格の紹介や写真などを閲覧することができます。**
 
-URL ▶︎ https://introduce-kuro.netlify.app
+URL : <a href="https://introduce-kuro.netlify.app" target="_blank">https://introduce-kuro.netlify.app</a>
 
 ## 使用技術
 
