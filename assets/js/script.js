@@ -1,3 +1,7 @@
+$(function() {
+    $('#video').fadeIn(1000);
+});
+
 // ハンバーガーメニュー
 $(function() {
     $('.hamburger').click(function() {
