@@ -48,6 +48,7 @@ h2 {
 
 /* 背景動画 */
 #video-area {
+  display: none;
   position: fixed;
   z-index: -1;
   top: 0;
@@ -57,7 +58,6 @@ h2 {
   overflow: hidden;
 }
 #video {
-  display: none;
   position: absolute;
   z-index: -1;
   top: 50%;

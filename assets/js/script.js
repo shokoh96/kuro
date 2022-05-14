@@ -1,5 +1,5 @@
 $(function() {
-    $('#video').fadeIn(1000);
+    $('#video-area').fadeIn(1000);
 });
 
 // ハンバーガーメニュー
