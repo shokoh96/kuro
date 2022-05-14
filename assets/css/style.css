@@ -51,7 +51,6 @@ h2 {
 
 /* 背景動画 */
 #video-area {
-  display: none;
   position: fixed;
   z-index: -1;
   top: 0;
