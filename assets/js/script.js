@@ -1,27 +1,27 @@
-$(function() {
-    $('#top').fadeIn(1000);
+$(function () {
+  $('#top').fadeIn(1000);
 });
 
 // ハンバーガーメニュー
-$(function() {
-    $('.hamburger').click(function() {
-        $(this).toggleClass('active');
+$(function () {
+  $('.hamburger').click(function () {
+    $(this).toggleClass('active');
 
-        if ($(this).hasClass('active')) {
-            $('.globalMenuSp').addClass('active');
-        } else {
-            $('.globalMenuSp').removeClass('active');
-        }
-    });
+    if ($(this).hasClass('active')) {
+      $('.globalMenuSp').addClass('active');
+    } else {
+      $('.globalMenuSp').removeClass('active');
+    }
+  });
 });
 
 // 押したら閉じる処理
-$('.globalMenuSp a[href^="#"]').on('click', function() {
-    $('.hamburger').click();
-  });
+$('.globalMenuSp a[href^="#"]').on('click', function () {
+  $('.hamburger').click();
+});
 
 new LuminousGallery(document.querySelectorAll('.grid-gallery'), {}, {
-  caption: function(trigger) {
+  caption: function (trigger) {
     return trigger.querySelector('img').getAttribute('alt');
   }
 });
