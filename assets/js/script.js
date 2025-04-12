@@ -1,5 +1,16 @@
-$(function () {
-  $('#top').fadeIn(1000);
+// ページ読み込み後フェードイン
+document.addEventListener("DOMContentLoaded", function () {
+  const topElement = document.getElementById("top");
+  if (topElement) {
+    topElement.style.opacity = 0;
+    topElement.style.display = "block";
+    let opacity = 0;
+    const fadeIn = setInterval(() => {
+      opacity += 0.05;
+      topElement.style.opacity = opacity;
+      if (opacity >= 1) clearInterval(fadeIn);
+    }, 50);
+  }
 });
 
 // ハンバーガーメニュー
