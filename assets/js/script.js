@@ -14,21 +14,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ハンバーガーメニュー
-$(function () {
-  $('.hamburger').click(function () {
-    $(this).toggleClass('active');
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const globalMenu = document.querySelector(".globalMenuSp");
 
-    if ($(this).hasClass('active')) {
-      $('.globalMenuSp').addClass('active');
-    } else {
-      $('.globalMenuSp').removeClass('active');
-    }
-  });
-});
+  if (hamburger && globalMenu) {
+    hamburger.addEventListener("click", function () {
+      this.classList.toggle("active");
+      if (this.classList.contains("active")) {
+        globalMenu.classList.add("active");
+      } else {
+        globalMenu.classList.remove("active");
+      }
+    });
 
-// 押したら閉じる処理
-$('.globalMenuSp a[href^="#"]').on('click', function () {
-  $('.hamburger').click();
+    // メニュー内リンクをクリックしたときの処理
+    const menuLinks = globalMenu.querySelectorAll('a[href^="#"]');
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        hamburger.click();
+      })
+    })
+  }
 });
 
 new LuminousGallery(document.querySelectorAll('.grid-gallery'), {}, {
