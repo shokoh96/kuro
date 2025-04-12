@@ -1,5 +1,5 @@
-// ページ読み込み後フェードイン
 document.addEventListener("DOMContentLoaded", function () {
+  // フェードイン処理
   const topElement = document.getElementById("top");
   if (topElement) {
     topElement.style.opacity = 0;
@@ -11,10 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (opacity >= 1) clearInterval(fadeIn);
     }, 50);
   }
-});
 
-// ハンバーガーメニュー
-document.addEventListener("DOMContentLoaded", function () {
+  // ハンバーガーメニュー
   const hamburger = document.querySelector(".hamburger");
   const globalMenu = document.querySelector(".globalMenuSp");
 
@@ -28,13 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // メニュー内リンクをクリックしたときの処理
+    // 押したら閉じる処理
     const menuLinks = globalMenu.querySelectorAll('a[href^="#"]');
     menuLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        hamburger.click();
-      })
-    })
+      link.addEventListener("click", () => hamburger.click());
+    });
   }
 });
 
