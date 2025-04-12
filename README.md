@@ -11,7 +11,7 @@ URL ▶︎ https://introduce-kuro.netlify.app
 
 ## 使用技術
 
-HTML・CSS・jQuery
+HTML・CSS・JavaScript
 
 ## (参考)レスポンシブ対応
 
